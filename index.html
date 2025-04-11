@@ -4,17 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Important Announcement</title>
+    <title>Google Review Form</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Loading Form</h1>
-        <p>Please wait while we prepare your form...</p>
-        <div class="loading-bar">
-            <div class="progress"></div>
+        <div class="google-header">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google"
+                class="google-logo">
+            <h1>Review Form</h1>
         </div>
+        <p class="subtitle">Please help us improve by sharing your experience</p>
+        <p class="website-link">Bait ul Habibi's Link: <a href="https://ismailtaher.github.io/bait-ul-habibi/"
+                target="_blank">Review
+                Website</a></p>
+        <form id="importantForm">
+            <div class="form-group">
+                <label>How would you rate your experience?</label>
+                <div class="star-rating">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <input type="hidden" id="rating" name="rating" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Your Review</label>
+                <textarea id="message" name="message" rows="4" required
+                    placeholder="Share your experience with us..."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" required>
+                    I confirm this is my honest review based on my personal experience
+                </label>
+            </div>
+            <button type="submit" class="submit-btn">
+                Submit Review
+            </button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
